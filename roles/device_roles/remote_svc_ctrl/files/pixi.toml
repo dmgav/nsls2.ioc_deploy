@@ -1,0 +1,15 @@
+[workspace]
+authors = ["Jakub Wlodek <jwlodek@bnl.gov>"]
+channels = ["conda-forge"]
+name = "files"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+ioc = "remote-svc-ctrl $PREFIX $SERVICE --host $USERNAME@$HOST"
+
+[dependencies]
+python = ">=3.13,<3.14"
+
+[pypi-dependencies]
+remote-svc-ctrl = ">=0.1.1, <0.2"

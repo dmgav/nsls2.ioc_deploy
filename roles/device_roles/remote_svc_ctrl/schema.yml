@@ -1,0 +1,9 @@
+---
+
+type: enum("remote_svc_ctrl")
+environment:
+  PREFIX: str()
+  USERNAME: str()
+  HOST: any(ip(), hostname())
+  SERVICE: regex("^[a-zA-Z0-9_-]+\\.service$")
+  ENGINEER: str(required=False)
