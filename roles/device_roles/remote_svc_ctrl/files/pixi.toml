@@ -6,10 +6,10 @@ platforms = ["linux-64"]
 version = "0.1.0"
 
 [tasks]
-ioc = "remote-svc-ctrl $PREFIX $SERVICE --host $USERNAME@$HOST"
+ioc = "remote-svc-ctrl $PREFIX $SERVICE --host $USERNAME@$HOST --log-lines 30 ${LOG_FILE:+--log-file $LOG_FILE}"
 
 [dependencies]
 python = ">=3.13,<3.14"
 
 [pypi-dependencies]
-remote-svc-ctrl = ">=0.1.1, <0.2"
+remote-svc-ctrl = { git = "https://github.com/NSLS2/remote-svc-ctrl.git", branch = "main" }
