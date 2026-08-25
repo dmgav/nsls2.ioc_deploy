@@ -16,10 +16,10 @@ verification:
       - "export EPICS_CAS_BEACON_ADDR_LIST"
 
       # Make sure environment variables are exported
-      - "export PREFIX='XF:31ID1-CT{SVC-XSPD:1}'"
-      - "export SERVICE='xspd.service'"
-      - "export USERNAME='xspadmin'"
-      - "export HOST='xf31id1-lambda1'"
+      - "export PREFIX=XF:31ID1-CT{SVC-XSPD:1}"
+      - "export SERVICE=xspd.service"
+      - "export USERNAME=xspadmin"
+      - "export HOST=xf31id1-lambda1"
 
       # Make sure we run the correct exec
       - "pixi run ioc"
