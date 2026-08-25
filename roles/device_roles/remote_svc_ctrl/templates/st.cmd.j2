@@ -16,7 +16,7 @@ export EPICS_PVAS_BEACON_ADDR_LIST={{ host_config.epics_interface.broadcast }}
 export EPICS_PVAS_INTF_ADDR_LIST={{ host_config.epics_interface.address }}
 
 {% for key, value in deploy_ioc_merged_env.items() %}
-export {{ key }}={{ value }}
+export {{ key }}={{ value | quote }}
 {% endfor %}
 
-pixi run ioc
+{{ ioc.pixi_executable_path | default(deploy_ioc_pixi_executable_path) }} run ioc
