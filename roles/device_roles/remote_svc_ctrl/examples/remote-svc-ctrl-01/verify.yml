@@ -19,7 +19,7 @@ verification:
       - "pixi run remote-svc-ctrl"
       - "XF:31ID1-CT{SVC-XSPD:1}"
       - "xspd.service"
-      - "--host xspadmin@xf31id1-lambda1"
+      - '--host "xspadmin@xf31id1-lambda1"'
       - "--log-lines 30"
 
   permissions:
