@@ -9,14 +9,6 @@
     mode: "0664"
   with_fileglob: "files/*"
 
-- name: Install pixi.toml
-  ansible.builtin.template:
-    src: "templates/pixi.toml.j2"
-    dest: "{{ deploy_ioc_ioc_directory }}/pixi.toml"
-    owner: "{{ host_config.softioc_user }}"
-    group: "{{ host_config.softioc_group }}"
-    mode: "0664"
-
 - name: Install dependencies
   ansible.builtin.command:
     cmd: "{{ ioc.pixi_executable_path | default(deploy_ioc_pixi_executable_path) }} install"
