@@ -2,6 +2,7 @@
 
 type: enum("remote_svc_ctrl")
 pixi_executable_path: str(required=False)
+service_type: enum("systemd", "initd", default="systemd", required=False)
 environment:
   PREFIX: str()  # IOC PV Prefix
   USERNAME: str()  # Username on the remote (DCU) host
