@@ -4,6 +4,7 @@ dbLoadDatabase "dbd/{{ deploy_ioc_executable }}.dbd"
 {{ deploy_ioc_executable }}_registerRecordDeviceDriver pdbbase
 
 ## Load record instances for PSC1
+dbLoadRecords("db/bpc.db", "P=$(SYSTEMS), NO=$(NUM), DEVICE=$(DEVICE)")
 dbLoadRecords("db/lstats.db", "P=$(SYSTEMS), NO=$(NUM), DEVICE=$(DEVICE)")
 dbLoadRecords("db/status10hz.db", "P=$(SYSTEMS), NO=$(NUM), DEVICE=$(DEVICE), OFFSET=100, BUFLEN=10000")
 dbLoadRecords("db/control_glob.db", "P=$(SYSTEMS), NO=$(NUM), DEVICE=$(DEVICE)")
