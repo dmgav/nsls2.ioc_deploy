@@ -40,3 +40,8 @@ dbpf $(SYSTEMS){$(DEVICE)$(NUM)}Chan3:DAC_OpMode-SP 0
 dbpf $(SYSTEMS){$(DEVICE)$(NUM)}Chan4:DAC_OpMode-SP 0
 
 dbpf $(SYSTEMS){$(DEVICE)$(NUM)}Chan2:AveMode-SP 0
+
+seq ch_fsm,"M0=$(SYSTEMS){$(DEVICE)$(NUM)},M1=Chan1"
+seq ch_fsm,"M0=$(SYSTEMS){$(DEVICE)$(NUM)},M1=Chan2"
+seq ch_fsm,"M0=$(SYSTEMS){$(DEVICE)$(NUM)},M1=Chan3"
+seq ch_fsm,"M0=$(SYSTEMS){$(DEVICE)$(NUM)},M1=Chan4"
